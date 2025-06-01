@@ -1,13 +1,13 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { Contact } from "../model";
+import type { ContactModel } from "../model";
 
 export const contactsSlice = createSlice({
     name: "contacts",
     initialState: {
-        items: [] as Contact[],
+        items: [] as ContactModel[],
     },
     reducers: {
-        addContact(state, action: PayloadAction<Contact>) {
+        addContact(state, action: PayloadAction<ContactModel>) {
             state.items.push(action.payload);
         },
         deleteContact(state, action: PayloadAction<string>) {

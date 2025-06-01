@@ -1,27 +1,8 @@
-import { FaUser, FaPhone } from "react-icons/fa";
-import type { Contact } from "../../model";
 import css from "./ContactList.module.css";
-import { useAppDispatch, useAppSelector } from "../../hooks";
-import { deleteContact } from "../../redux/contactsSlice";
+import { useAppSelector } from "../../hooks";
 import { useMemo } from "react";
 import Fuse from "fuse.js";
-
-export function Contact({ contact: c }: { contact: Contact }) {
-  const dispatch = useAppDispatch();
-  return (
-    <div className={css.contact}>
-      <div>
-        <p>
-          <FaUser /> {c.name}
-        </p>
-        <p>
-          <FaPhone /> {c.number}
-        </p>
-      </div>
-      <button onClick={() => dispatch(deleteContact(c.id))}>Delete</button>
-    </div>
-  );
-}
+import { Contact } from "../Contact";
 
 export default function ContactList() {
   const contacts = useAppSelector((state) => state.contacts.items);

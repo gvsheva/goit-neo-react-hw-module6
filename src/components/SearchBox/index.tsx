@@ -1,28 +1,23 @@
+import type { ChangeEventHandler } from "react";
 import { useAppDispatch } from "../../hooks";
 import { changeFilter } from "../../redux/filtersSlice";
 import css from "./SearchBox.module.css";
-import { Field, Form, Formik } from "formik";
 
 export default function SearchBox() {
   const dispatch = useAppDispatch();
+  const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+    dispatch(changeFilter(e.currentTarget.value));
+  };
   return (
     <div className={css.searchBox}>
-      <Formik
-        initialValues={{ name: "" }}
-        onSubmit={({ name }) => {
-          dispatch(changeFilter(name));
-        }}
-      >
-        <Form className={css.form}>
-          <label>Find contacts by name</label>
-          <Field
-            type="text"
-            name="name"
-            placeholder="Enter the filter value and press Enter key"
-            className={css.input}
-          />
-        </Form>
-      </Formik>
+      <label>Find contacts by name</label>
+      <input
+        type="search"
+        name="name"
+        className={css.input}
+        onChange={handleChange}
+        placeholder="Enter some contact's name"
+      />
     </div>
   );
 }
