@@ -1,0 +1,42 @@
+.contactList {
+    border: 2px solid #4caf50;
+    border-radius: 8px;
+    padding: 12px;
+    list-style: none;
+    background-color: #f1f8e9;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ff9800;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #fff8e1;
+}
+
+.contact p {
+    margin: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.contact button {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #c62828;
+}

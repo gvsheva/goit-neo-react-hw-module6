@@ -1,0 +1,38 @@
+.contactForm {
+    border: 2px solid #1976d2;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    background-color: #e3f2fd;
+}
+
+.contactForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contactForm label {
+    font-weight: 500;
+}
+
+.contactForm input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contactForm .error {
+    color: red;
+    font-size: 12px;
+}
+
+.contactForm button {
+    padding: 8px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}

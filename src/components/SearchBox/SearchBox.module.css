@@ -1,0 +1,16 @@
+.searchBox .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid #ec407a;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #fce4ec;
+}
+
+.searchBox .input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+}
